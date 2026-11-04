@@ -217,3 +217,136 @@ img {
     justify-content: flex-end;
     gap: 10px;
 }
+
+/* ==========================================================================
+   Assignment 3.3: Homepage Clone Layout Rules 
+   ========================================================================== */
+
+/* Header Top Corner Right-Alignment Alignment Setup */
+.clone-header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 16px 24px;
+    background: transparent;
+}
+.header-right-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.header-right-links a {
+    color: #202124;
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+.header-right-links a:hover {
+    text-decoration: underline;
+}
+
+/* Sign-In Button Component Custom Stylesheet Override */
+.signin-btn {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    padding: 9px 23px;
+    font-weight: 500;
+    font-size: 0.88rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.signin-btn:hover {
+    background-color: #155cb4;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+}
+.apps-icon-btn {
+    background: transparent;
+    border: none;
+    font-size: 1.25rem;
+    cursor: pointer;
+    color: #5f6368;
+}
+
+/* Main Core Layout Placement Rules */
+.clone-main-container {
+    max-width: 600px;
+    margin: 80px auto 0 auto;
+    text-align: center;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Google Colored Branding Text Mimic Layout Styles */
+.branding-logo-box {
+    font-family: 'Product Sans', 'Inter', sans-serif;
+    font-size: 5.5rem;
+    font-weight: 700;
+    letter-spacing: -3px;
+    margin-bottom: 25px;
+}
+.logo-g { color: #4285f4; }
+.logo-o1 { color: #ea4335; }
+.logo-o2 { color: #fbbc05; }
+.logo-g2 { color: #4285f4; }
+.logo-l { color: #34a853; }
+.logo-e { color: #ea4335; }
+
+/* Elegant Floating Search Grid Container Structure */
+.search-input-box-wrapper {
+    display: flex;
+    align-items: center;
+    border: 1px solid #eeedea;
+    background-color: #ffffff;
+    max-width: 580px;
+    height: 46px;
+    margin: 0 auto;
+    padding: 0 15px;
+    border-radius: 24px;
+    box-shadow: 0 1px 6px rgba(32,33,36,0.1);
+    transition: all 0.2s ease;
+}
+.search-input-box-wrapper:hover, .search-input-box-wrapper:focus-within {
+    box-shadow: 0 1px 8px rgba(32,33,36,0.18);
+    border-color: rgba(223,225,229,0);
+}
+.search-bar-input-field {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    padding-left: 10px;
+    color: #202124;
+}
+
+/* Base Clone Utility Action Buttons Layout styling */
+.clone-action-btn {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    color: #3c4043;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.88rem;
+    padding: 10px 16px;
+    margin: 20px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.1s ease;
+}
+.clone-action-btn:hover {
+    border: 1px solid #dadce0;
+    color: #202124;
+    background-color: #f8f9fa;
+}
+
+/* Language offer layout string links alignment */
+.languages-offered-text {
+    font-size: 0.82rem;
+    color: #4d5156;
+    margin-top: 15px;
+}
+.languages-offered-text a {
+    color: #1a0dab;
+    text-decoration: none;
+    margin-left: 5px;
+}
+.languages-offered-text a:hover {
+    text-decoration: underline;
+}
