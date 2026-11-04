@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 3.2: Component Library</title>
+    <!-- Linking your active stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Shared Navigation Menu Grid -->
+    <nav>
+        <a href="profile.html">Home Profile</a> | 
+        <a href="recipe.html">Cookie Recipe</a> | 
+        <a href="contact.html">Contact Form</a> | 
+        <a href="news.html">Semantic News</a> |
+        <a href="components.html">Component Library</a>
+    </nav>
+
+    <main>
+        <h1>UI Component Library</h1>
+        <p>A collection of isolated interface elements built explicitly for Assignment 3.2 constraints.</p>
+
+        <!-- 1. INTERACTIVE BUTTON COMPONENT -->
+        <section class="component-section">
+            <h2>1. Isolated Button States</h2>
+            <button class="custom-btn">Interactive Button</button>
+        </section>
+
+        <!-- 2. ALERTS MODULE LAYER -->
+        <section class="component-section">
+            <h2>2. System Alert Box</h2>
+            <div class="alert-box alert-success" role="alert">
+                <span class="alert-icon">✓</span>
+                <p class="alert-message"><strong>Success!</strong> Your component layout loaded correctly.</p>
+            </div>
+        </section>
+
+        <!-- 3. COMPACT PROFILE CARD BLOCK -->
+        <section class="component-section">
+            <h2>3. Product / Profile Card</h2>
+            <div class="ui-card">
+                <div class="card-image-placeholder">UI Preview</div>
+                <div class="card-body">
+                    <h3 class="card-title">Card Component Header</h3>
+                    <p class="card-text">A flexible card module used to display clustered media layouts, articles, and product snapshots cleanly across desktop screens.</p>
+                    <button class="custom-btn card-btn">Read More</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. MODAL POPUP PREVIEW GRID -->
+        <section class="component-section">
+            <h2>4. Static Modal Window View</h2>
+            <div class="modal-backdrop-preview">
+                <div class="ui-modal" role="dialog">
+                    <header class="modal-header">
+                        <h3>Modal Window Title</h3>
+                        <span class="modal-close-btn">&times;</span>
+                    </header>
+                    <div class="modal-body-content">
+                        <p>This is a floating modal layout window box. In production environments, it stands in front of body canvas text elements to focus user input attention.</p>
+                    </div>
+                    <footer class="modal-footer">
+                        <button class="custom-btn secondary-btn">Cancel</button>
+                        <button class="custom-btn">Confirm Action</button>
+                    </footer>
+                </div>
+            </div>
+        </section>
+    </main>
+
+</body>
+</html>

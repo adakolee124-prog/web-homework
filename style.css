@@ -58,3 +58,162 @@ img {
     margin: 20px auto;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
+
+/* ==========================================================================
+   Assignment 3.2: Component Library UI Configurations 
+   ========================================================================== */
+
+/* Section separations */
+.component-section {
+    margin: 45px 0;
+    padding-top: 25px;
+    border-top: 2px dashed #e2e8f0;
+}
+
+/* 1. BUTTON STATES (Interactive Base, Hover Transformation, Keyboard Focus) */
+.custom-btn {
+    background-color: var(--primary-blue);
+    color: var(--pure-white);
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Hover modification state */
+.custom-btn:hover {
+    background-color: #0369a1; /* Slightly deep dark blue tint override */
+    transform: translateY(-2px); /* Lifts up slightly */
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.2);
+}
+
+/* Focus modification state (Keyboard navigation tracking ring) */
+.custom-btn:focus {
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.4);
+}
+
+/* Secondary neutral button variant */
+.secondary-btn {
+    background-color: #e2e8f0;
+    color: var(--slate-dark);
+}
+.secondary-btn:hover {
+    background-color: #cbd5e1;
+    box-shadow: none;
+    transform: none;
+}
+
+/* 2. ALERT BOX MODULE */
+.alert-box {
+    display: flex;
+    align-items: center;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 15px 0;
+}
+.alert-success {
+    background-color: #f0fdf4;
+    border-left: 5px solid #22c55e;
+    color: #166534;
+}
+.alert-icon {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-right: 12px;
+}
+.alert-message {
+    margin: 0;
+}
+
+/* 3. SHADOW-BOUND CARD MODULE */
+.ui-card {
+    background: var(--pure-white);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    overflow: hidden;
+    max-width: 340px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+.ui-card:hover {
+    box-shadow: 0 10px 20px rgba(0,0,0,0.06);
+}
+.card-image-placeholder {
+    background-color: #cbd5e1;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #64748b;
+}
+.card-body {
+    padding: 20px;
+}
+.card-title {
+    margin-top: 0;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+.card-text {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin-bottom: 20px;
+}
+.card-btn {
+    width: 100%;
+    padding: 10px;
+}
+
+/* 4. FLOATING MODAL OVERLAY WRAPPER */
+.modal-backdrop-preview {
+    background-color: rgba(15, 23, 42, 0.4); /* Translucent dim screen effect */
+    padding: 40px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ui-modal {
+    background: var(--pure-white);
+    border-radius: 8px;
+    width: 100%;
+    max-width: 440px;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.modal-header {
+    background-color: #f8fafc;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #e2e8f0;
+}
+.modal-header h3 {
+    margin: 0;
+    font-size: 1.1rem;
+}
+.modal-close-btn {
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #94a3b8;
+}
+.modal-body-content {
+    padding: 20px;
+    font-size: 0.95rem;
+    color: #475569;
+}
+.modal-footer {
+    padding: 14px 20px;
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
