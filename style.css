@@ -350,3 +350,61 @@ img {
 .languages-offered-text a:hover {
     text-decoration: underline;
 }
+
+/* ==========================================================================
+   Assignment 3.4: Responsive Showcase Design Rules
+   ========================================================================== */
+
+/* Main Container Override */
+.showcase-container {
+    max-width: 900px !important;
+    margin: 30px auto;
+}
+.showcase-desc {
+    text-align: center;
+    color: #64748b;
+    margin-bottom: 30px;
+}
+
+/* Base Flexbox Row Setup (Default view for Laptops/Desktops) */
+.responsive-flex-grid {
+    display: flex;
+    flex-direction: row; /* Arranges items side-by-side */
+    gap: 20px;
+    justify-content: space-between;
+}
+
+/* Card item elements structure inside the flex container */
+.showcase-card {
+    flex: 1; /* Instructs items to grow and distribute widths equally */
+    background-color: var(--pure-white);
+    border: 1px solid #e2e8f0;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+/* ==========================================================================
+   MOBILE DEVICE BREAKPOINT (Media Query)
+   ========================================================================== */
+/* When the browser window screen width is 768px wide or smaller... */
+@media screen and (max-width: 768px) {
+    
+    body {
+        padding: 10px;
+    }
+
+    /* Force the side-by-side flex layout to rotate vertically into a stacked column */
+    .responsive-flex-grid {
+        flex-direction: column; 
+    }
+
+    main, .showcase-container {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    h1 {
+        font-size: 1.8rem; /* Shrinks the giant title font so it doesn't overflow mobile screens */
+    }
+}
