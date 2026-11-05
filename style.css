@@ -408,3 +408,126 @@ img {
         font-size: 1.8rem; /* Shrinks the giant title font so it doesn't overflow mobile screens */
     }
 }
+
+/* ==========================================================================
+   Assignment 3.5: Premium Product Landing Page Styles
+   ========================================================================== */
+
+/* Main Layout Reset for Landing Screen */
+.landing-page-wrapper {
+    max-width: 1000px !important;
+    margin: 40px auto;
+    background: transparent !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+}
+
+/* Two-Column Hero Grid Structure */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 80px;
+    padding: 20px;
+}
+.hero-content {
+    flex: 1;
+    text-align: left;
+}
+.badge-text {
+    background-color: rgba(2, 132, 199, 0.1);
+    color: var(--primary-blue);
+    padding: 6px 12px;
+    font-weight: 700;
+    font-size: 0.75rem;
+    border-radius: 20px;
+    letter-spacing: 1px;
+}
+.hero-content h1 {
+    font-size: 2.8rem;
+    text-align: left !important;
+    margin-top: 15px;
+    line-height: 1.2;
+}
+.hero-subtext {
+    font-size: 1.1rem;
+    color: #475569;
+    margin: 20px 0 30px 0;
+}
+.hero-cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+.hero-image-box {
+    flex: 1;
+}
+.landing-hero-img {
+    border-radius: 16px !important;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1) !important;
+    transform: none !important;
+}
+
+/* Features Component Section */
+.features-section {
+    padding: 20px;
+    text-align: center;
+}
+.features-section h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+.features-flex-grid {
+    display: flex;
+    gap: 20px;
+}
+.feature-card {
+    flex: 1;
+    background-color: var(--pure-white);
+    padding: 30px 20px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+    text-align: center;
+}
+.feature-icon {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 15px;
+}
+.feature-card h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    color: var(--slate-dark);
+    margin-bottom: 10px;
+}
+.feature-card p {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 0;
+}
+
+/* ==========================================================================
+   MOBILE QUERY UPDATES FOR 3.5 LANDING PAGE
+   ========================================================================== */
+@media screen and (max-width: 768px) {
+    /* Collapse the split hero screen into a single column view */
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 30px;
+    }
+    .hero-content h1 {
+        font-size: 2rem;
+        text-align: center !important;
+    }
+    .hero-cta-buttons {
+        justify-content: center;
+    }
+    /* Collapse feature grids into rows */
+    .features-flex-grid {
+        flex-direction: column;
+        gap: 15px;
+    }
+}
