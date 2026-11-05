@@ -85,3 +85,48 @@ console.log("FizzBuzz first 15 numbers ->", fizzBuzz(15));
 console.log("Clean array without duplicates [1, 2, 2, 3, 4, 4] ->", removeDuplicates([1, 2, 2, 3, 4, 4]));
 console.log("Sum of evens in array [1, 2, 3, 4, 5, 6] ->", sumEvenNumbers([1, 2, 3, 4, 5, 6]));
 console.log("Capitalized sentence ->", capitalizeWords("learning code is awesome"));
+
+// ==========================================================================
+// Assignment 4.2: Number Guessing Game Engine (Console Only)
+// ==========================================================================
+
+function runNumberGuessingGame(simulatedGuesses) {
+    // 1. The computer picks a secret number between 1 and 100
+    const secretNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+    let gameOver = false;
+
+    console.log("\n--- 🎮 Starting a New Number Guessing Game (1-100) ---");
+    // For testing visibility, uncomment the next line if you want to see the target:
+    // console.log("(Psst... The secret number is: " + secretNumber + ")");
+
+    // 2. Process our list of guesses step-by-step
+    for (let i = 0; i < simulatedGuesses.length; i++) {
+        let currentGuess = simulatedGuesses[i];
+        attempts++;
+        
+        console.log("Attempt #" + attempts + " | User guessed: " + currentGuess);
+
+        if (currentGuess === secretNumber) {
+            console.log("🎉 CORRECT! The secret number was indeed " + secretNumber + ".");
+            console.log("🏆 It took you a total of " + attempts + " attempts to win the game!");
+            gameOver = true;
+            break;
+        } else if (currentGuess < secretNumber) {
+            console.log("❌ Too LOW! Try a higher number.");
+        } else {
+            console.log("❌ Too HIGH! Try a lower number.");
+        }
+    }
+
+    if (!gameOver) {
+        console.log("⚠️ Game Over! You ran out of your simulated guesses list before finding " + secretNumber + ".");
+    }
+}
+
+// ==========================================================================
+// RUN THE GAME WITH A SIMULATED USER USER INPUT ROW
+// ==========================================================================
+// Let's simulate a user making adjustments to narrow down a guess:
+const myTestGuesses =;
+runNumberGuessingGame(myTestGuesses);
