@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.1: Interactive To-Do List</title>
+    <!-- Links to your main project stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="profile.html">Home Profile</a> | 
+        <a href="landing.html">Product Landing</a> |
+        <a href="todo.html">Interactive To-Do List</a>
+    </nav>
+
+    <main class="todo-app-card">
+        <h1>Task Manager</h1>
+        <p>Add tasks, check them off, or remove them. Your list is saved securely inside your browser window storage cache.</p>
+
+        <!-- Task Input Entry Form Row -->
+        <form id="todo-form" class="todo-input-row">
+            <input type="text" id="todo-input" placeholder="Type a new assignment task here..." aria-label="New Task Input Field" required>
+            <button type="submit" class="custom-btn">Add Task</button>
+        </form>
+
+        <!-- Unordered List Canvas where tasks get dynamically generated -->
+        <ul id="todo-list" class="todo-unordered-list"></ul>
+    </main>
+
+    <!-- Connect our JavaScript document logic file -->
+    <script src="todo-app.js"></script>
+</body>
+</html>

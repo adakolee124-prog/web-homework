@@ -531,3 +531,71 @@ img {
         gap: 15px;
     }
 }
+
+/* ==========================================================================
+   Assignment 5.1: Interactive To-Do List Application UI Elements
+   ========================================================================== */
+.todo-app-card {
+    max-width: 550px !important;
+    margin: 40px auto;
+}
+.todo-input-row {
+    display: flex;
+    gap: 12px;
+    margin: 25px 0;
+}
+.todo-input-row input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+.todo-input-row input:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+.todo-unordered-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.todo-item-node {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--slate-light);
+    padding: 14px 18px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+.task-text-label {
+    flex: 1;
+    cursor: pointer;
+    font-weight: 500;
+}
+/* Visual cross out layout modification rule for checked off tasks */
+.completed-task-state .task-text-label {
+    text-decoration: line-through;
+    color: #94a3b8;
+}
+.completed-task-state {
+    opacity: 0.65;
+    background-color: #f1f5f9;
+}
+.delete-task-btn {
+    background: transparent;
+    border: none;
+    color: #ef4444;
+    font-size: 1.5rem;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 5px;
+    transition: transform 0.2s ease;
+}
+.delete-task-btn:hover {
+    transform: scale(1.2);
+}
