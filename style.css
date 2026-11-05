@@ -599,3 +599,66 @@ img {
 .delete-task-btn:hover {
     transform: scale(1.2);
 }
+
+/* ==========================================================================
+   Assignment 5.2: CSS Grid Matrix Calculator Theme Structure
+   ========================================================================== */
+.calc-container-card {
+    max-width: 400px !important;
+    margin: 40px auto;
+    background: #1e293b !important; /* Deep dark charcoal card wrap */
+    color: #f8fafc !important;
+    padding: 25px !important;
+}
+.calc-container-card h1 {
+    color: #f1f5f9;
+}
+.calc-screen-box {
+    margin-bottom: 20px;
+}
+#calc-display {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #0f172a;
+    border: 2px solid #334155;
+    color: #38bdf8; /* Glowing tech blue numeric output colors */
+    font-family: monospace;
+    font-size: 2rem;
+    text-align: right;
+    padding: 15px;
+    border-radius: 6px;
+    outline: none;
+}
+
+/* Proper Button Alignment Matrix Grid Layout */
+.calc-buttons-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 symmetric item sizing columns */
+    gap: 12px;
+}
+.calc-btn {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    font-weight: 600;
+    padding: 18px 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.15s ease;
+}
+.number-btn { background-color: #334155; color: #f8fafc; }
+.number-btn:hover { background-color: #475569; }
+
+.operator-btn { background-color: #f97316; color: white; } /* Vivid structural contrast colors */
+.operator-btn:hover { background-color: #ea580c; }
+
+.utility-btn { background-color: #ef4444; color: white; }
+.utility-btn:hover { background-color: #dc2626; }
+
+.equals-btn { background-color: #10b981; color: white; }
+.equals-btn:hover { background-color: #059669; }
+
+/* Grid coordinate spacing spanning properties rules */
+.row-span { grid-row: span 2; display: flex; align-items: center; justify-content: center; height: 100%; }
+.col-span { grid-row: span 2; display: flex; align-items: center; justify-content: center; height: 100%; }
+.zero-btn { grid-column: span 2; }

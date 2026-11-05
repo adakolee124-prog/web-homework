@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.2: Interactive Calculator Grid</title>
+    <!-- Links to your main project stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="profile.html">Home Profile</a> | 
+        <a href="todo.html">Task Manager</a> |
+        <a href="calculator.html">Grid Calculator</a>
+    </nav>
+
+    <main class="calc-container-card">
+        <h1>JS Grid Calculator</h1>
+        <p>A fully isolated grid computation layout handling decimal expressions and logical division constraints.</p>
+
+        <!-- Dynamic Calculator Screen Wrapper -->
+        <div class="calc-screen-box">
+            <input type="text" id="calc-display" readonly value="0" aria-label="Calculator Display Screen">
+        </div>
+
+        <!-- System Interaction Buttons Grid Layout -->
+        <div class="calc-buttons-grid">
+            <!-- Row 1 -->
+            <button class="calc-btn utility-btn" onclick="clearDisplay()">C</button>
+            <button class="calc-btn operator-btn" onclick="appendOperator('/')">÷</button>
+            <button class="calc-btn operator-btn" onclick="appendOperator('*')">&times;</button>
+            <button class="calc-btn operator-btn" onclick="appendOperator('-')">-</button>
+
+            <!-- Row 2 -->
+            <button class="calc-btn number-btn" onclick="appendNumber('7')">7</button>
+            <button class="calc-btn number-btn" onclick="appendNumber('8')">8</button>
+            <button class="calc-btn number-btn" onclick="appendNumber('9')">9</button>
+            <button class="calc-btn operator-btn row-span" onclick="appendOperator('+')">+</button>
+
+            <!-- Row 3 -->
+            <button class="calc-btn number-btn" onclick="appendNumber('4')">4</button>
+            <button class="calc-btn number-btn" onclick="appendNumber('5')">5</button>
+            <button class="calc-btn number-btn" onclick="appendNumber('6')">6</button>
+
+            <!-- Row 4 -->
+            <button class="calc-btn number-btn" onclick="appendNumber('1')">1</button>
+            <button class="calc-btn number-btn" onclick="appendNumber('2')">2</button>
+            <button class="calc-btn number-btn" onclick="appendNumber('3')">3</button>
+            <button class="calc-btn equals-btn col-span" onclick="calculateResult()">=</button>
+
+            <!-- Row 5 -->
+            <button class="calc-btn number-btn zero-btn" onclick="appendNumber('0')">0</button>
+            <button class="calc-btn number-btn" onclick="appendDecimal('.')">.</button>
+        </div>
+    </main>
+
+    <!-- Linking your app computation logic layer -->
+    <script src="calc-app.js"></script>
+</body>
+</html>
