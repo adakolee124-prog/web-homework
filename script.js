@@ -188,3 +188,61 @@ console.log(`🏆 Top Performing Student: ${championStudent.name} with an averag
 // Step C: Filter lists downward to filter out elite tier nodes
 const honorsList = getStudentsAboveClassAverage(averagesList);
 console.log("Students Scoring Above Class Average:", honorsList);
+
+// ==========================================================================
+// Assignment 4.4: Rock, Paper, Scissors Game (5-Round Match)
+// ==========================================================================
+
+function playRockPaperScissors() {
+    const choices = ["rock", "paper", "scissors"];
+    let userScore = 0;
+    let computerScore = 0;
+
+    console.log("\n--- 🥊 Starting Rock, Paper, Scissors Match (Best of 5 Rounds) ---");
+
+    for (let round = 1; round <= 5; round++) {
+        // 1. Simulate a random choice for the user and computer for console testing
+        const userChoice = choices[Math.floor(Math.random() * choices.length)];
+        const computerChoice = choices[Math.floor(Math.random() * choices.length)];
+
+        console.log(`\n--- Round ${round} ---`);
+        console.log(`User Choice: ${userChoice.toUpperCase()} vs Computer Choice: ${computerChoice.toUpperCase()}`);
+
+        // 2. Evaluate round results
+        if (userChoice === computerChoice) {
+            console.log("Result: It's a tie for this round!");
+        } else if (
+            (userChoice === "rock" && computerChoice === "scissors") ||
+            (userChoice === "paper" && computerChoice === "rock") ||
+            (userChoice === "scissors" && computerChoice === "paper")
+        ) {
+            console.log("Result: You win this round! 🎉");
+            userScore++;
+        } else {
+            console.log("Result: Computer wins this round! ❌");
+            computerScore++;
+        }
+
+        // Display current running tally score
+        console.log(`Current Score -> User: ${userScore} | Computer: ${computerScore}`);
+    }
+
+    // 3. Declare the absolute ultimate match winner after 5 rounds
+    console.log("\n=================================");
+    console.log("       FINAL MATCH RESULT        ");
+    console.log("=================================");
+    console.log(`Final Tally -> User: ${userScore} | Computer: ${computerScore}`);
+
+    if (userScore === computerScore) {
+        console.log("🏁 Overall Match Result: The entire game is a dead tie!");
+    } else if (userScore > computerScore) {
+        console.log("🏆 Overall Match Result: Congratulations! You beat the computer! 🏆");
+    } else {
+        console.log("💀 Overall Match Result: The computer wins the match. Better luck next time!");
+    }
+}
+
+// ==========================================================================
+// RUN THE GAME AUTOMATICALLY FOR CONSOLE INSPECTION
+// ==========================================================================
+playRockPaperScissors();
