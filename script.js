@@ -130,3 +130,61 @@ function runNumberGuessingGame(simulatedGuesses) {
 // Let's simulate a user making adjustments to narrow down a guess:
 const myTestGuesses =;
 runNumberGuessingGame(myTestGuesses);
+
+// ==========================================================================
+// Assignment 4.3: Student Grade Manager (Modern ES6 Array Methods)
+// ==========================================================================
+
+// 1. Defining the Core Dataset Array using Student Objects
+const studentDataset = [
+    { name: "Adakole", scores: [88, 92, 95, 90] },
+    { name: "Sarah", scores: [76, 85, 80, 88] },
+    { name: "Michael", scores: [95, 98, 92, 96] },
+    { name: "Blessing", scores: [82, 79, 85, 84] },
+    { name: "David", scores: [68, 72, 75, 70] }
+];
+
+// 2. Compute individual student averages using .reduce()
+function calculateStudentAverages(students) {
+    return students.map(student => {
+        const totalSum = student.scores.reduce((sum, score) => sum + score, 0);
+        const average = totalSum / student.scores.length;
+        return { name: student.name, averageScore: Math.round(average * 10) / 10 };
+    });
+}
+
+// 3. Find the absolute top performing student using .reduce()
+function findTopStudent(studentsWithAverages) {
+    return studentsWithAverages.reduce((topStudent, currentStudent) => {
+        return currentStudent.averageScore > topStudent.averageScore ? currentStudent : topStudent;
+    });
+}
+
+// 4. Find all students above the total class average using .filter() and .reduce()
+function getStudentsAboveClassAverage(studentsWithAverages) {
+    // Calculate total combined score average for the whole classroom block
+    const grandTotal = studentsWithAverages.reduce((sum, student) => sum + student.averageScore, 0);
+    const classAverage = grandTotal / studentsWithAverages.length;
+    
+    console.log("Global Class Average Baseline:", Math.round(classAverage * 10) / 10);
+    
+    // Filter out only students who match or beat the metric line
+    return studentsWithAverages.filter(student => student.averageScore > classAverage);
+}
+
+// ==========================================================================
+// RUN LOG OPERATIONS FOR CORE TESTING EVALUATION
+// ==========================================================================
+console.log("\n--- 📊 Starting Student Grade Manager Execution ---");
+
+// Step A: Map out names side-by-side with calculated averages
+const averagesList = calculateStudentAverages(studentDataset);
+console.log("Calculated Student Averages:", averagesList);
+
+// Step B: Extract the single highest matching record
+const championStudent = findTopStudent(averagesList);
+console.log(`🏆 Top Performing Student: ${championStudent.name} with an average of ${championStudent.averageScore}`);
+
+// Step C: Filter lists downward to filter out elite tier nodes
+const honorsList = getStudentsAboveClassAverage(averagesList);
+console.log("Students Scoring Above Class Average:", honorsList);
