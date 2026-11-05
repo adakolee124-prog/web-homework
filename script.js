@@ -246,3 +246,63 @@ function playRockPaperScissors() {
 // RUN THE GAME AUTOMATICALLY FOR CONSOLE INSPECTION
 // ==========================================================================
 playRockPaperScissors();
+
+// ==========================================================================
+// Assignment 4.5: Daily Habit (CodeWars Algorithm Challenge & Tracking)
+// ==========================================================================
+
+/**
+ * CodeWars Challenge Title: Counting Sheep... (8kyu)
+ * Problem Description: Given an array of sheep states (true = present, false = missing),
+ * write a function that counts the number of sheep present in the pasture layout box.
+ */
+function countSheepInPasture(sheepArray) {
+    // Handle edge cases for empty or null array inputs safely
+    if (!sheepArray || sheepArray.length === 0) return 0;
+    
+    // Filter down the array using functional tracking to isolate true values, then read the length
+    const totalPresent = sheepArray.filter(sheep => sheep === true).length;
+    return totalPresent;
+}
+
+// Track and declare a scoring baseline to record the habit consistency trace metrics
+function trackDailyCodingHabit(username, challengeSolved) {
+    console.log(`\n--- 🚀 CodeWars Daily Habit Tracker for ${username} ---`);
+    
+    const habitLog = {
+        date: "2026-11-05", // Current system calendar timestamp track
+        taskName: "Counting Sheep Algorithm (8kyu)",
+        pointsEarned: 20,
+        status: "Completed & Verified Successfully"
+    };
+
+    if (challengeSolved) {
+        console.log(`✅ Daily Habit Status: Goal Met! You solved the "${habitLog.taskName}" challenge.`);
+        console.log(`📈 Scores Logged -> Points Earned Today: +${habitLog.pointsEarned} XP.`);
+        console.log("🏆 Habit Streak: Maintained! Keep continuing this process day-by-day.");
+    } else {
+        console.log("❌ Daily Habit Status: Incomplete. Remember to solve one coding problem today!");
+    }
+    
+    return habitLog;
+}
+
+// ==========================================================================
+// RUN THE CODEWARS ALGORITHM SOLUTION & TRACKER
+// ==========================================================================
+// Sample pasturage dataset trace for code verification
+const activeSheepPasture = [
+    true,  true,  true,  false,
+    true,  true,  true,  true ,
+    true,  false, true,  false,
+    true,  false, false, true ,
+    true,  true,  true,  true ,
+    false, false, true,  true
+];
+
+// Execute algorithm verification console prints
+const calculatedTotal = countSheepInPasture(activeSheepPasture);
+console.log(`🐑 Total number of sheep present in pasture configuration: ${calculatedTotal}`);
+
+// Update your user dashboard logging statistics
+trackDailyCodingHabit("Adakole", true);
