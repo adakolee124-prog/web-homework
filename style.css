@@ -745,3 +745,97 @@ img {
     font-weight: 600;
     margin: 20px 0 30px 0;
 }
+
+/* ==========================================================================
+   Assignment 5.4: Image Gallery & Carousel Styles
+   ========================================================================== */
+.gallery-app-card {
+    max-width: 760px !important;
+    margin: 40px auto;
+    text-align: center;
+}
+.gallery-subtitle {
+    color: #64748b;
+    margin-bottom: 25px;
+}
+
+/* Main Stage & Arrow Buttons */
+.carousel-main-stage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0f172a;
+    border-radius: 12px;
+    padding: 15px;
+    margin-bottom: 20px;
+}
+.main-image-frame {
+    margin: 0;
+    width: 100%;
+}
+#large-display-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 0 auto;
+    transform: none !important;
+}
+#image-caption-text {
+    color: #e2e8f0;
+    font-size: 0.95rem;
+    margin-top: 12px;
+    font-weight: 500;
+}
+
+/* Floating Left/Right Overlay Buttons */
+.carousel-nav-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.85);
+    color: var(--slate-dark);
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 16px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.2s ease;
+    z-index: 10;
+}
+.carousel-nav-btn:hover {
+    background-color: var(--primary-blue);
+    color: var(--pure-white);
+}
+.prev-btn { left: 25px; }
+.next-btn { right: 25px; }
+
+/* Thumbnail Strip Row */
+.gallery-thumbnails-row {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.gallery-thumb-item {
+    width: 90px;
+    height: 65px;
+    object-fit: cover;
+    border-radius: 6px;
+    cursor: pointer;
+    opacity: 0.55;
+    border: 3px solid transparent;
+    margin: 0 !important;
+    transition: all 0.2s ease;
+}
+.gallery-thumb-item:hover {
+    opacity: 0.9;
+    transform: scale(1.05) !important;
+}
+.active-thumb {
+    opacity: 1;
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.3);
+}

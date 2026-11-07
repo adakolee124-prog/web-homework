@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.4: Image Gallery & Carousel</title>
+    <!-- Links to your main project stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="profile.html">Home Profile</a> | 
+        <a href="todo.html">Task Manager</a> |
+        <a href="calculator.html">Grid Calculator</a> |
+        <a href="quiz.html">Interactive Quiz</a> |
+        <a href="gallery.html">Image Gallery</a>
+    </nav>
+
+    <main class="gallery-app-card">
+        <h1>Interactive Image Carousel</h1>
+        <p class="gallery-subtitle">Click a thumbnail, use the buttons, or press your <strong>Left / Right Keyboard Arrows</strong> to switch photos.</p>
+
+        <!-- Large Main Display Stage -->
+        <div class="carousel-main-stage">
+            <button id="prev-slide-btn" class="carousel-nav-btn prev-btn" aria-label="Previous Image">&#10094;</button>
+            
+            <figure class="main-image-frame">
+                <img id="large-display-img" src="https://unsplash.com" alt="Laptop displaying clean programming code on a modern desk">
+                <figcaption id="image-caption-text">1 / 4 — Modern Coding Workspace</figcaption>
+            </figure>
+
+            <button id="next-slide-btn" class="carousel-nav-btn next-btn" aria-label="Next Image">&#10095;</button>
+        </div>
+
+        <!-- Thumbnail Strip Container -->
+        <div id="thumbnail-strip" class="gallery-thumbnails-row"></div>
+    </main>
+
+    <!-- Linking your carousel JavaScript controller -->
+    <script src="gallery-app.js"></script>
+</body>
+</html>
