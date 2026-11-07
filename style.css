@@ -662,3 +662,86 @@ img {
 .row-span { grid-row: span 2; display: flex; align-items: center; justify-content: center; height: 100%; }
 .col-span { grid-row: span 2; display: flex; align-items: center; justify-content: center; height: 100%; }
 .zero-btn { grid-column: span 2; }
+
+/* ==========================================================================
+   Assignment 5.3: Interactive Quiz Application Styles
+   ========================================================================== */
+.quiz-app-card {
+    max-width: 600px !important;
+    margin: 40px auto;
+}
+.hidden-element {
+    display: none !important;
+}
+.quiz-progress-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--slate-light);
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 25px;
+    border: 1px solid #e2e8f0;
+}
+#live-score-badge {
+    color: var(--primary-blue);
+}
+.quiz-question-title {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1.25rem !important;
+    border-bottom: none !important;
+    margin-bottom: 20px;
+}
+.quiz-options-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.quiz-choice-btn {
+    background-color: var(--pure-white);
+    color: var(--slate-dark);
+    border: 2px solid #cbd5e1;
+    padding: 14px 18px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.quiz-choice-btn:hover:not([disabled]) {
+    border-color: var(--primary-blue);
+    background-color: #f0f9ff;
+}
+.quiz-choice-btn:disabled {
+    cursor: not-allowed;
+}
+
+/* Answer Feedback Highlight States */
+.correct-answer {
+    background-color: #dcfce7 !important;
+    border-color: #22c55e !important;
+    color: #166534 !important;
+    font-weight: 700;
+}
+.wrong-answer {
+    background-color: #fee2e2 !important;
+    border-color: #ef4444 !important;
+    color: #991b1b !important;
+}
+.quiz-footer-controls {
+    margin-top: 25px;
+    text-align: right;
+}
+#quiz-results-screen {
+    text-align: center;
+    padding: 20px 0;
+}
+.final-score-text {
+    font-size: 1.35rem;
+    font-weight: 600;
+    margin: 20px 0 30px 0;
+}

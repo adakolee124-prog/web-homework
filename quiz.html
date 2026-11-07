@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5.3: Interactive Quiz App</title>
+    <!-- Links to your main project stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="profile.html">Home Profile</a> | 
+        <a href="todo.html">Task Manager</a> |
+        <a href="calculator.html">Grid Calculator</a> |
+        <a href="quiz.html">Interactive Quiz</a>
+    </nav>
+
+    <main class="quiz-app-card">
+        <h1>Web Dev Knowledge Quiz</h1>
+        
+        <!-- Active Question Display Container -->
+        <div id="quiz-active-screen">
+            <div class="quiz-progress-bar">
+                <span id="question-counter">Question 1 of 4</span>
+                <span id="live-score-badge">Score: 0</span>
+            </div>
+
+            <h2 id="question-text" class="quiz-question-title">Loading question...</h2>
+
+            <!-- Multiple Choice Option Buttons Container -->
+            <div id="answer-buttons-grid" class="quiz-options-list"></div>
+
+            <!-- Next Question Navigation Control -->
+            <div class="quiz-footer-controls">
+                <button id="next-question-btn" class="custom-btn hidden-element">Next Question &rarr;</button>
+            </div>
+        </div>
+
+        <!-- Final Results Summary Container (Hidden until quiz finishes) -->
+        <div id="quiz-results-screen" class="hidden-element">
+            <h2>Quiz Complete! 🎉</h2>
+            <p id="final-score-message" class="final-score-text">You scored 0 out of 4!</p>
+            <button id="restart-quiz-btn" class="custom-btn">Restart Quiz</button>
+        </div>
+    </main>
+
+    <!-- Linking your interactive quiz logic file -->
+    <script src="quiz-app.js"></script>
+</body>
+</html>
