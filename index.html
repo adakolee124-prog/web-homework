@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adakole | Web Developer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="interactive-navbar">
+        <div class="nav-top-bar">
+            <span style="font-weight: 700; font-size: 1.1rem;">Adakole.dev</span>
+            <button id="dark-mode-toggle" class="theme-toggle-btn">🌙 Dark Mode</button>
+        </div>
+        <div id="nav-links" class="nav-links-group">
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="landing-page-wrapper">
+        
+        <!-- ABOUT SECTION -->
+        <section id="about" class="hero-section" style="margin-bottom: 50px;">
+            <div class="hero-content">
+                <span class="badge-text">FRONTEND WEB DEVELOPER</span>
+                <h1>Hi, I'm Adakole. I build clean, interactive web apps.</h1>
+                <p class="hero-subtext">I specialize in semantic HTML5, modern responsive CSS layouts, and interactive JavaScript applications. Below are my featured deployed projects.</p>
+                <div class="hero-cta-buttons">
+                    <a href="#projects" class="custom-btn">View My Work</a>
+                    <a href="contact.html" class="custom-btn secondary-btn">Contact Me</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SHOWCASE SECTION -->
+        <section id="projects" class="features-section">
+            <h2>Featured Deployed Projects</h2>
+            <div class="features-flex-grid">
+                
+                <!-- Project 1: To-Do App -->
+                <article class="ui-card" style="max-width: 100%; text-align: left;">
+                    <div class="card-image-placeholder" style="background: #dbeafe; color: #1e40af;">📝 Task Manager UI</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Interactive To-Do List</h3>
+                        <p class="card-text">A persistent task manager built with JavaScript DOM manipulation and localStorage so tasks survive browser refreshes.</p>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="https://vercel.app" target="_blank" class="custom-btn" style="padding: 8px 14px; font-size: 0.85rem; text-decoration: none;">Live Demo</a>
+                            <a href="https://github.com" target="_blank" class="custom-btn secondary-btn" style="padding: 8px 14px; font-size: 0.85rem; text-decoration: none;">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: Calculator -->
+                <article class="ui-card" style="max-width: 100%; text-align: left;">
+                    <div class="card-image-placeholder" style="background: #1e293b; color: #38bdf8;">🧮 Grid Calculator UI</div>
+                    <div class="card-body">
+                        <h3 class="card-title">JS Grid Calculator</h3>
+                        <p class="card-text">A responsive CSS Grid calculator supporting decimal math, clear resets, and division-by-zero error protection.</p>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="https://vercel.app" target="_blank" class="custom-btn" style="padding: 8px 14px; font-size: 0.85rem; text-decoration: none;">Live Demo</a>
+                            <a href="https://github.com" target="_blank" class="custom-btn secondary-btn" style="padding: 8px 14px; font-size: 0.85rem; text-decoration: none;">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Product Landing Page -->
+                <article class="ui-card" style="max-width: 100%; text-align: left;">
+                    <div class="card-image-placeholder" style="background: #fef3c7; color: #92400e;">🎧 Product Landing UI</div>
+                    <div class="card-body">
+                        <h3 class="card-title">Smart Headphones Landing</h3>
+                        <p class="card-text">A mobile-responsive product landing page featuring Flexbox grids, dark mode toggle, and a mobile hamburger menu.</p>
+                        <div style="display: flex; gap: 10px;">
+                            <a href="https://vercel.app" target="_blank" class="custom-btn" style="padding: 8px 14px; font-size: 0.85rem; text-decoration: none;">Live Demo</a>
+                            <a href="https://github.com" target="_blank" class="custom-btn secondary-btn" style="padding: 8px 14px; font-size: 0.85rem; text-decoration: none;">GitHub</a>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- CONTACT FOOTER SECTION -->
+        <section style="text-align: center; margin-top: 60px; padding: 30px; border-top: 1px solid #e2e8f0;">
+            <h2>Let's Work Together</h2>
+            <p>Have a project or opportunity in mind? Reach out directly through my contact page.</p>
+            <a href="contact.html" class="custom-btn" style="display: inline-block; margin-top: 10px; text-decoration: none;">Send a Message</a>
+        </section>
+
+    </main>
+
+    <script src="interactive.js"></script>
+</body>
+</html>
