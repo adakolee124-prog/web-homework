@@ -1119,3 +1119,42 @@ img {
         justify-content: center;
     }
 }
+
+/* ==========================================================================
+   Assignment 7.5: REST Countries Explorer Styles
+   ========================================================================== */
+.country-app-card {
+    max-width: 720px !important;
+    margin: 40px auto;
+    text-align: center;
+}
+.country-profile-card {
+    display: flex;
+    gap: 25px;
+    align-items: center;
+    background-color: var(--slate-light);
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    padding: 25px;
+    text-align: left;
+    margin-top: 20px;
+}
+.country-flag-img {
+    width: 220px !important;
+    height: auto !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+    border: 1px solid #cbd5e1;
+    transform: none !important;
+}
+.country-details p {
+    margin: 6px 0;
+    font-size: 0.95rem;
+}
+
+@media screen and (max-width: 650px) {
+    .country-profile-card {
+        flex-direction: column;
+        text-align: center;
+    }
+}

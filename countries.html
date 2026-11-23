@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7.5: REST Countries Explorer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Portfolio</a> | 
+        <a href="weather.html">Weather App</a> | 
+        <a href="movies.html">Movie Search</a> | 
+        <a href="github-viewer.html">GitHub Viewer</a> | 
+        <a href="countries.html">Country Explorer</a>
+    </nav>
+
+    <main class="country-app-card">
+        <h1>🌍 Country Explorer</h1>
+        <p class="weather-subtitle">Built directly from the official <strong>REST Countries v3.1 API</strong> documentation.</p>
+
+        <!-- Country Search Form -->
+        <form id="country-search-form" class="todo-input-row">
+            <input type="text" id="country-input" placeholder="Search any country (e.g., Nigeria, Ghana, Japan, Brazil)..." required>
+            <button type="submit" class="custom-btn">Explore</button>
+        </form>
+
+        <!-- Loading Spinner -->
+        <div id="country-spinner" class="spinner-box hidden-element">
+            <div class="loader-ring"></div>
+            <p>Loading country facts...</p>
+        </div>
+
+        <!-- Error Alert -->
+        <div id="country-error" class="validation-alert error hidden-element"></div>
+
+        <!-- Country Result Card -->
+        <div id="country-result-box" class="hidden-element"></div>
+    </main>
+
+    <script src="countries-app.js"></script>
+</body>
+</html>
