@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7.3: GitHub Profile Viewer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Portfolio</a> | 
+        <a href="weather.html">Weather App</a> | 
+        <a href="movies.html">Movie Search</a> | 
+        <a href="github-viewer.html">GitHub Viewer</a>
+    </nav>
+
+    <main class="github-app-container">
+        <h1>GitHub Profile Viewer</h1>
+        <p class="weather-subtitle">Enter any GitHub username (try <strong>adakolee124-prog</strong>, <strong>torvalds</strong>, or <strong>gaearon</strong>) to inspect their profile and repositories.</p>
+
+        <!-- Username Search Form -->
+        <form id="github-search-form" class="todo-input-row">
+            <input type="text" id="github-username-input" placeholder="Enter GitHub username..." required>
+            <button type="submit" class="custom-btn">Search User</button>
+        </form>
+
+        <!-- Loading Spinner -->
+        <div id="gh-spinner" class="spinner-box hidden-element">
+            <div class="loader-ring"></div>
+            <p>Fetching GitHub profile...</p>
+        </div>
+
+        <!-- Error Alert -->
+        <div id="gh-error" class="validation-alert error hidden-element"></div>
+
+        <!-- Profile & Repositories Output -->
+        <div id="gh-profile-output" class="hidden-element">
+            <!-- User Profile Card -->
+            <div id="gh-user-card" class="gh-profile-card"></div>
+
+            <!-- Top Repositories List -->
+            <h3 style="text-align: left; margin-top: 30px;">Latest & Top Public Repositories</h3>
+            <div id="gh-repos-list" class="gh-repos-grid"></div>
+        </div>
+    </main>
+
+    <script src="github-app.js"></script>
+</body>
+</html>
