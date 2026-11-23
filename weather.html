@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7.1: Weather Forecast App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Portfolio</a> | 
+        <a href="todo.html">To-Do App</a> | 
+        <a href="weather.html">Weather App</a>
+    </nav>
+
+    <main class="weather-app-card">
+        <h1>Live Weather Forecast</h1>
+        <p class="weather-subtitle">Search any city worldwide for real-time conditions and a 5-day outlook.</p>
+
+        <!-- Search Form -->
+        <form id="weather-form" class="todo-input-row">
+            <input type="text" id="city-input" placeholder="Enter city name (e.g., Abuja, Lagos, London)..." required>
+            <button type="submit" class="custom-btn">Search</button>
+        </form>
+
+        <!-- Loading Spinner (Hidden by default) -->
+        <div id="loading-spinner" class="spinner-box hidden-element">
+            <div class="loader-ring"></div>
+            <p>Fetching weather data...</p>
+        </div>
+
+        <!-- Graceful Error Alert (Hidden by default) -->
+        <div id="weather-error" class="validation-alert error hidden-element"></div>
+
+        <!-- Weather Results Display (Hidden until searched) -->
+        <div id="weather-results" class="hidden-element">
+            <!-- Current Weather Card -->
+            <div class="current-weather-box">
+                <h2 id="city-title" style="border: none; margin: 0;">--</h2>
+                <div class="temp-display" id="current-temp">--°C</div>
+                <p id="weather-desc" class="weather-condition-text">--</p>
+                <div class="weather-metrics">
+                    <span id="wind-speed">Wind: -- km/h</span>
+                </div>
+            </div>
+
+            <!-- 5-Day Forecast Grid -->
+            <h3>5-Day Forecast</h3>
+            <div id="forecast-grid" class="forecast-cards-row"></div>
+        </div>
+    </main>
+
+    <script src="weather-app.js"></script>
+</body>
+</html>

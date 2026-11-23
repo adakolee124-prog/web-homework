@@ -839,3 +839,90 @@ img {
     border-color: var(--primary-blue);
     box-shadow: 0 0 0 2px rgba(2, 132, 199, 0.3);
 }
+
+/* ==========================================================================
+   Assignment 7.1: Weather App & Loading Spinner Styles
+   ========================================================================== */
+.weather-app-card {
+    max-width: 720px !important;
+    margin: 40px auto;
+    text-align: center;
+}
+.weather-subtitle {
+    color: #64748b;
+}
+
+/* CSS Loading Spinner Animation */
+.spinner-box {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary-blue);
+    font-weight: 600;
+}
+.loader-ring {
+    width: 40px;
+    height: 40px;
+    border: 4px solid #e2e8f0;
+    border-top: 4px solid var(--primary-blue);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Current Weather Card */
+.current-weather-box {
+    background: linear-gradient(135deg, #0284c7, #1e3a8a);
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 25px 0;
+}
+.current-weather-box h2 {
+    color: white;
+}
+.temp-display {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+.weather-condition-text {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+/* 5-Day Forecast Row */
+.forecast-cards-row {
+    display: flex;
+    gap: 12px;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+.forecast-day-card {
+    flex: 1;
+    min-width: 110px;
+    background-color: var(--slate-light);
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+    padding: 15px 10px;
+}
+.forecast-date {
+    font-weight: 700;
+    font-size: 0.85rem;
+    color: var(--slate-dark);
+    margin-bottom: 8px;
+}
+.forecast-cond {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+.forecast-temps {
+    font-size: 0.95rem;
+    color: #475569;
+}
