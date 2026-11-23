@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 7.2: Movie & Show Search</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Portfolio</a> | 
+        <a href="weather.html">Weather App</a> | 
+        <a href="movies.html">Movie Search</a>
+    </nav>
+
+    <main class="movie-app-container">
+        <h1>Movie & TV Show Search</h1>
+        <p class="weather-subtitle">Start typing below—debouncing waits 500ms after you stop typing before searching.</p>
+
+        <!-- Debounced Live Search Input -->
+        <div class="todo-input-row">
+            <input type="text" id="movie-search-input" placeholder="Search titles (e.g., Batman, Stranger Things, Avengers)..." aria-label="Search movies and shows">
+        </div>
+
+        <!-- Loading Spinner -->
+        <div id="movie-spinner" class="spinner-box hidden-element">
+            <div class="loader-ring"></div>
+            <p>Searching catalog...</p>
+        </div>
+
+        <!-- Status / Error Message -->
+        <div id="movie-status-msg" class="weather-subtitle"></div>
+
+        <!-- Poster Grid -->
+        <div id="movies-grid" class="poster-grid-layout"></div>
+    </main>
+
+    <!-- Details Modal Overlay (Hidden until a poster is clicked) -->
+    <div id="movie-modal-overlay" class="movie-modal-backdrop hidden-element">
+        <div class="ui-modal" style="max-width: 550px;">
+            <header class="modal-header">
+                <h3 id="modal-movie-title">Title</h3>
+                <span id="close-movie-modal" class="modal-close-btn">&times;</span>
+            </header>
+            <div class="modal-body-content" id="modal-movie-body"></div>
+        </div>
+    </div>
+
+    <script src="movies-app.js"></script>
+</body>
+</html>
