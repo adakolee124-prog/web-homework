@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment 7.4: Vite To-Do App</title>
+  </head>
+  <body>
+    <main class="todo-app-card">
+      <h1>⚡ Vite Task Manager</h1>
+      <p>Powered by Vite, npm, and ES Modules with persistent localStorage.</p>
+
+      <form id="todo-form" class="todo-input-row">
+        <input type="text" id="todo-input" placeholder="Add a new task..." required />
+        <button type="submit" class="custom-btn">Add Task</button>
+      </form>
+
+      <ul id="todo-list" class="todo-unordered-list"></ul>
+    </main>
+
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
